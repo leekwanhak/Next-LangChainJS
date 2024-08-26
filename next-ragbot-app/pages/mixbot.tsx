@@ -1,13 +1,11 @@
-//사용자가 LLM을 사용하는 방법을 고를 수 있게 만들기
-
 import { useState } from "react";
 import { IMemberMessage, UserType, BotType } from "@/interfaces/message";
 
 import moment from "moment";
 
 const MixBot = () => {
-  //챗봇 유형 정의하기->
-  const [botType, setBotType] = useState<BotType>();
+  //챗봇 유형 정의하기
+  const [botType, setBotType] = useState<BotType>(BotType.LLMGPT);
 
   //사용자 대화닉네임 상태값 정의
   const [nickName, setNickName] = useState<string>("eddy");
